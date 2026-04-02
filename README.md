@@ -1,0 +1,1 @@
+This project is experiment with generating gym website using codex
