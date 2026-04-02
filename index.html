@@ -1,4 +1,3 @@
-#added a form to the website and also added some styling to it.
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,52 +5,226 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Health and Fitness</title>
+    <title>Fit & Fine Gym</title>
   </head>
   <body>
-    <header class="header">
-      <!-- right box for logo -->
-      <div class="left">
-        <img src="img/body.png" alt="" />
-        <div>Fit & Fine</div>
-      </div>
-      <!-- mid box for navbar -->
-      <div class="mid">
-        <ul class="navBar">
-          <li><a href=""> Home</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Fitness Calculator</a></li>
-          <li><a href="">Contact Us</a></li>
-        </ul>
-      </div>
-      <!-- right box for buttons -->
-      <div class="right">
-        <button class="btn">Contact Us</button
-        ><button class="btn">Email Us</button>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#" aria-label="Fit & Fine home">
+          <img class="brand-mark" src="img/body.png" alt="" aria-hidden="true" />
+          <span class="brand-text">
+            <span class="brand-name">Fit & Fine</span>
+            <span class="brand-tagline">Gym & Fitness Studio</span>
+          </span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link" href="#classes">Classes</a>
+          <a class="nav-link" href="#trainers">Trainers</a>
+          <a class="nav-link" href="#pricing">Pricing</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-cta">
+          <a class="btn btn-ghost" href="#contact">Book a tour</a>
+          <a class="btn btn-primary" href="#pricing">Join now</a>
+        </div>
       </div>
     </header>
 
-    <div class="container">
-      <h2>join the best GYM</h2>
-      <form action="">
-        <div class="formGrp">
-          <input type="text" name="" id="ssa" placeholder="Enter first name" />
-          <input type="text" name="" placeholder="Enter second name" />
-          <input type="text" name="" placeholder="Enter your gender" />
-          <input type="text" name="" placeholder="Enter your age" />
-          <input type="text" name="" placeholder="Enter your email" />
-          <input type="text" name="" placeholder="Enter your phone number" />
-          <button class="btn">submit</button>
+    <main id="main">
+      <section class="hero" aria-label="Intro">
+        <div class="wrap hero-inner">
+          <div class="hero-copy">
+            <p class="pill">New member special • First week free</p>
+            <h1>Build strength. Boost energy. Feel unstoppable.</h1>
+            <p class="lead">
+              A friendly gym with coaching, classes, and a plan that fits your
+              schedule—whether you’re starting out or leveling up.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#pricing">View memberships</a>
+              <a class="btn btn-ghost" href="#classes">Explore classes</a>
+            </div>
+
+            <dl class="stats" aria-label="Gym highlights">
+              <div class="stat">
+                <dt>Open</dt>
+                <dd>5am–11pm</dd>
+              </div>
+              <div class="stat">
+                <dt>Classes</dt>
+                <dd>40+ / week</dd>
+              </div>
+              <div class="stat">
+                <dt>Coaches</dt>
+                <dd>Certified</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-card" aria-label="Quick signup form">
+            <h2 class="card-title">Get a free class pass</h2>
+            <p class="card-subtitle">We’ll text you a time slot within 24 hours.</p>
+
+            <form class="form" action="#" method="post">
+              <label class="field">
+                <span class="label">Name</span>
+                <input class="input" type="text" name="name" placeholder="Alex Johnson" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span class="label">Phone</span>
+                <input class="input" type="tel" name="phone" placeholder="(555) 123-4567" autocomplete="tel" required />
+              </label>
+
+              <label class="field">
+                <span class="label">Goal</span>
+                <select class="input" name="goal" required>
+                  <option value="" selected disabled>Select a goal</option>
+                  <option>Lose weight</option>
+                  <option>Build muscle</option>
+                  <option>Improve conditioning</option>
+                  <option>Overall health</option>
+                </select>
+              </label>
+
+              <button class="btn btn-primary btn-block" type="submit">Claim pass</button>
+              <p class="fineprint">No spam. Unsubscribe anytime.</p>
+            </form>
+          </div>
         </div>
-      </form>
-    </div>
+      </section>
+
+      <section class="section" id="classes">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Popular classes</h2>
+            <p>Pick a vibe. We’ll handle the programming.</p>
+          </header>
+
+          <div class="grid cards">
+            <article class="card">
+              <h3>Strength 45</h3>
+              <p>Full-body lifting with coaching cues and progress tracking.</p>
+              <p class="meta">Mon/Wed/Fri • 6:00pm</p>
+            </article>
+            <article class="card">
+              <h3>HIIT Burn</h3>
+              <p>Intervals + conditioning for fat loss, stamina, and speed.</p>
+              <p class="meta">Tue/Thu • 7:00am</p>
+            </article>
+            <article class="card">
+              <h3>Mobility & Core</h3>
+              <p>Move better, recover faster, and build a resilient midline.</p>
+              <p class="meta">Sat • 10:00am</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="trainers">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Meet the trainers</h2>
+            <p>Supportive coaching that keeps you consistent.</p>
+          </header>
+
+          <div class="grid cards">
+            <article class="card person">
+              <div class="avatar" aria-hidden="true">AJ</div>
+              <div>
+                <h3>Alex James</h3>
+                <p class="meta">Strength & Hypertrophy</p>
+              </div>
+            </article>
+            <article class="card person">
+              <div class="avatar" aria-hidden="true">MS</div>
+              <div>
+                <h3>Maya Singh</h3>
+                <p class="meta">Mobility & Rehab</p>
+              </div>
+            </article>
+            <article class="card person">
+              <div class="avatar" aria-hidden="true">CR</div>
+              <div>
+                <h3>Chris Rivera</h3>
+                <p class="meta">Conditioning & HIIT</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="wrap">
+          <header class="section-head">
+            <h2>Simple pricing</h2>
+            <p>Cancel anytime. Upgrade whenever you’re ready.</p>
+          </header>
+
+          <div class="grid pricing">
+            <article class="card price">
+              <h3>Starter</h3>
+              <p class="amount">$29 <span>/ week</span></p>
+              <ul class="list">
+                <li>Gym access</li>
+                <li>1 class / week</li>
+                <li>Beginner plan</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="#contact">Talk to us</a>
+            </article>
+
+            <article class="card price featured" aria-label="Most popular plan">
+              <p class="badge">Most popular</p>
+              <h3>Unlimited</h3>
+              <p class="amount">$49 <span>/ week</span></p>
+              <ul class="list">
+                <li>Unlimited classes</li>
+                <li>Strength program</li>
+                <li>Monthly check-in</li>
+              </ul>
+              <a class="btn btn-primary btn-block" href="#contact">Join now</a>
+            </article>
+
+            <article class="card price">
+              <h3>Coaching</h3>
+              <p class="amount">$89 <span>/ week</span></p>
+              <ul class="list">
+                <li>Unlimited classes</li>
+                <li>1:1 coaching</li>
+                <li>Nutrition basics</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="#contact">Get coaching</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta" id="contact">
+        <div class="wrap cta-inner">
+          <div>
+            <h2>Ready to start?</h2>
+            <p>Send a message and we’ll schedule your tour.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="#">Call (555) 123-4567</a>
+            <a class="btn btn-ghost" href="mailto:hello@fitandfine.example">Email us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div class="footer-brand">
+          <p class="footer-name">Fit & Fine</p>
+          <p class="footer-meta">123 Main St • New York, NY</p>
+        </div>
+        <p class="footer-meta">© <span id="year">2026</span> Fit & Fine. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
