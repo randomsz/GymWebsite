@@ -1,13 +1,30 @@
-This project is experiment with generating gym website using codex.
+This project is an experiment generating a gym website using Codex.
 
-## Backend API
+## Stack / Structure
 
-A simple Node.js + Express backend is included in `backend/`.
+- React frontend: `client/` (Vite + React)
+- Node.js API: `server/` (Express)
+- Legacy Python API: `legacy/backend_py/` (optional, not used by default)
 
-- Setup: `cd backend && npm install`
-- Run: `npm run dev`
-- Health: `http://localhost:8787/health`
+## Quickstart
 
-If you don’t have Node/npm available, there’s also a zero-dependency Python backend in `backend_py/`:
+1) Install dependencies (npm workspaces):
 
-- Run: `python backend_py/server.py`
+`npm install`
+
+2) Run both client + server:
+
+`npm run dev`
+
+- React app: `http://localhost:5173`
+- API health: `http://localhost:8787/health`
+
+### Run individually
+
+- Client only: `npm run dev:client`
+- Server only: `npm run dev:server`
+
+### Configure API base URL (client)
+
+Set `VITE_API_BASE_URL` (defaults to `http://localhost:8787`).
+
